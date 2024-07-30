@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "3-NvaxA_oygSaGLl4",
+      });
+   })();
+</script>
+</head>
+<body>
+
+    <section class="contact">
+        <h2>Contact Me!</h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="full name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full name can,t be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="email address" id="email" class="item" autocomplete="off">
+                    <div class="error-txt">Email Address can,t be blank</div> 
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="phone number" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone number can,t be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="subject" id="subject" class="item" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message"  cols="30" rows="10" placeholder="your Message" class="item" autocomplete="off" ></textarea>
+                <div class="error-txt">Message can,t be blank</div>
+            </div>
+
+            <button onclick="sendMail()" type="submit">Send Message</button>
+
+        </form>
+
+    </section>   
+</body>
+</html>
